@@ -18,25 +18,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Osito Pixelado</title>
+  <title>Corazón Pixelado</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
       background-color: #111;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      font-family: sans-serif;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .pixel-heart {
+    .heart {
       display: grid;
       grid-template-columns: repeat(7, 20px);
       grid-template-rows: repeat(6, 20px);
       gap: 2px;
-      margin-bottom: 20px;
     }
 
     .pixel {
@@ -45,91 +44,100 @@
       background-color: transparent;
     }
 
-    .on {
+    .red {
+      background-color: red;
       animation: colorChange 1.5s infinite alternate;
     }
 
     @keyframes colorChange {
-      0% { background-color: #ff4d6d; }
-      100% { background-color: #ffa3b1; }
+      0% { background-color: red; }
+      100% { background-color: pink; }
     }
 
-    .mensaje {
-      font-size: 24px;
-      color: #fff;
-      animation: respirar 3s ease-in-out infinite;
-      margin-bottom: 20px;
+    .message {
+      margin-top: 30px;
+      color: white;
+      font-size: 1.5rem;
+      animation: breathe 3s ease-in-out infinite;
     }
 
-    @keyframes respirar {
-      0% { opacity: 0; transform: scale(0.95); }
-      50% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0.95); }
+    @keyframes breathe {
+      0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.98);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
     }
-
-    /* OSITO REAL PIXELADO */
-    .osito {
-      display: grid;
-      grid-template-columns: repeat(9, 10px);
-      grid-template-rows: repeat(11, 10px);
-      gap: 1px;
-      margin-top: 10px;
-    }
-
-    .cuadro {
-      width: 10px;
-      height: 10px;
-      background: transparent;
-    }
-
-    .marron { background: #c68642; }
-    .negro { background: #000; }
-    .rojo { background: #ff4d6d; }
   </style>
 </head>
 <body>
 
-  <!-- CORAZÓN PIXELADO -->
-  <div class="pixel-heart">
-    <div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div>
-    <div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div>
-    <div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div>
-    <div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div>
-    <div class="pixel"></div><div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div><div class="pixel"></div>
-    <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel on"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+  <!-- Corazón Pixelado -->
+  <div class="heart">
+    <!-- Fila 1 -->
+    <div class="pixel"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="pixel"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="pixel"></div>
+
+    <!-- Fila 2 -->
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+
+    <!-- Fila 3 -->
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+
+    <!-- Fila 4 -->
+    <div class="pixel"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="pixel"></div>
+
+    <!-- Fila 5 -->
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+
+    <!-- Fila 6 -->
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="red"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
   </div>
 
-  <!-- MENSAJE -->
-  <div class="mensaje">chuli</div>
-
-  <!-- OSITO -->
-  <div class="osito">
-    <!-- FILA 1 -->
-    <div class="cuadro"></div><div class="marron"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div><div class="marron"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div>
-    <!-- FILA 2 -->
-    <div class="marron"></div><div class="negro"></div><div class="marron"></div><div class="marron"></div><div class="marron"></div><div class="marron"></div><div class="negro"></div><div class="marron"></div><div class="cuadro"></div>
-    <!-- FILA 3 -->
-    <div class="marron"></div><div class="marron"></div><div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="marron"></div><div class="cuadro"></div>
-    <!-- FILA 4 -->
-    <div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="cuadro"></div>
-    <!-- FILA 5 -->
-    <div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="cuadro"></div>
-    <!-- FILA 6 -->
-    <div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="cuadro"></div>
-    <!-- FILA 7 -->
-    <div class="marron"></div><div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="marron"></div><div class="cuadro"></div>
-    <!-- FILA 8 -->
-    <div class="cuadro"></div><div class="marron"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div><div class="marron"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div>
-    <!-- FILA 9 -->
-    <div class="cuadro"></div><div class="cuadro"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
-    <!-- FILA 10 -->
-    <div class="cuadro"></div><div class="cuadro"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div><div class="marron"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
-    <!-- FILA 11 -->
-    <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
-  </div>
+  <!-- Mensaje con respiración -->
+  <div class="message">chuli 🧡</div>
 
 </body>
 </html>
+
 
 
 
