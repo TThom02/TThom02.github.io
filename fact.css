@@ -83,5 +83,9 @@ body {
       opacity: 0.7;
     }
   }
+  body {
+    color-scheme: light;
+  }
+  
   
   
