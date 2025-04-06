@@ -65,7 +65,7 @@ body {
     text-align: center;
     font-size: 1.7em;
     font-weight: bold;
-    color: #ff4d4d; /* Rojo bien chillón */
+    color: #ff4d4d !important; /* Forzamos el color */
     text-shadow: 
       0 0 5px #ff4d4d,
       0 0 10px #ff0000,
