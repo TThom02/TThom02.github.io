@@ -18,7 +18,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corazón Pixelado con Mensaje</title>
+  <title>Corazón y Osito</title>
   <style>
     body {
       margin: 0;
@@ -31,6 +31,7 @@
       font-family: sans-serif;
     }
 
+    /* CORAZÓN PIXELADO */
     .pixel-heart {
       display: grid;
       grid-template-columns: repeat(7, 20px);
@@ -50,91 +51,80 @@
     }
 
     @keyframes colorChange {
-      0% { background-color: #ff4d6d; } /* rojo */
-      100% { background-color: #ffa3b1; } /* rosa */
+      0% { background-color: #ff4d6d; }
+      100% { background-color: #ffa3b1; }
     }
 
+    /* MENSAJE CON EFECTO DE RESPIRACIÓN */
     .mensaje {
       font-size: 24px;
       color: #fff;
       animation: respirar 3s ease-in-out infinite;
+      margin-bottom: 20px;
     }
 
     @keyframes respirar {
-      0% {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(0.95);
-      }
+      0% { opacity: 0; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0.95); }
+    }
+
+    /* OSITO PIXELADO SIMPLE */
+    .osito {
+      display: grid;
+      grid-template-columns: repeat(7, 10px);
+      grid-template-rows: repeat(7, 10px);
+      gap: 1px;
+      margin-top: 10px;
+    }
+
+    .osoPixel {
+      width: 10px;
+      height: 10px;
+      background-color: transparent;
+    }
+
+    .marron {
+      background-color: #c68642;
+    }
+
+    .negro {
+      background-color: #000;
+    }
+
+    .rojo {
+      background-color: #ff4d6d;
     }
   </style>
 </head>
 <body>
+
+  <!-- CORAZÓN PIXELADO -->
   <div class="pixel-heart">
-    <!-- Fila 1 -->
-    <div class="pixel"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel"></div>
-    
-    <!-- Fila 2 -->
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    
-    <!-- Fila 3 -->
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    
-    <!-- Fila 4 -->
-    <div class="pixel"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel"></div>
-    
-    <!-- Fila 5 -->
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel on"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    
-    <!-- Fila 6 -->
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel on"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
+    <div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div>
+    <div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div>
+    <div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div>
+    <div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div>
+    <div class="pixel"></div><div class="pixel"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel on"></div><div class="pixel"></div><div class="pixel"></div>
+    <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel on"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
   </div>
 
-  <div class="mensaje">Chulii</div>
+  <!-- MENSAJE -->
+  <div class="mensaje">Chuli 💘</div>
+
+  <!-- OSITO PIXELADO CHIQUITO -->
+  <div class="osito">
+    <div class="osoPixel"></div><div class="marron"></div><div class="marron"></div><div class="osoPixel"></div><div class="marron"></div><div class="marron"></div><div class="osoPixel"></div>
+    <div class="marron"></div><div class="negro"></div><div class="marron"></div><div class="marron"></div><div class="marron"></div><div class="negro"></div><div class="marron"></div>
+    <div class="marron"></div><div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="marron"></div>
+    <div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div>
+    <div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div>
+    <div class="marron"></div><div class="marron"></div><div class="rojo"></div><div class="rojo"></div><div class="rojo"></div><div class="marron"></div><div class="marron"></div>
+    <div class="osoPixel"></div><div class="marron"></div><div class="marron"></div><div class="osoPixel"></div><div class="marron"></div><div class="marron"></div><div class="osoPixel"></div>
+  </div>
+
 </body>
 </html>
+
 
 
