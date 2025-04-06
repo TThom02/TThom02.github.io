@@ -1,0 +1,63 @@
+body {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heart {
+    display: grid;
+    grid-template-columns: repeat(7, 20px);
+    grid-template-rows: repeat(6, 20px);
+    gap: 2px;
+  }
+  
+  .pixel {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+  
+  .red {
+    background-color: red;
+    animation: colorChange 1.5s infinite alternate;
+  }
+  
+  @keyframes colorChange {
+    0% { background-color: red; }
+    100% { background-color: pink; }
+  }
+  
+  .message {
+    margin-top: 30px;
+    color: white;
+    font-size: 1.5rem;
+    animation: breathe 3s ease-in-out infinite;
+  }
+  
+  @keyframes breathe {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.98);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .image-container img {
+    max-width: 150px;
+    height: auto;
+    image-rendering: pixelated;
+  }
+  
