@@ -63,10 +63,14 @@ body {
   .mensaje-oscuro {
     margin-top: 1em;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bold;
-    color: crimson;
-    text-shadow: 0 0 10px red;
+    color: #ff4d4d; /* Rojo bien chillón */
+    text-shadow: 
+      0 0 5px #ff4d4d,
+      0 0 10px #ff0000,
+      0 0 15px #ff0000,
+      0 0 20px #ff0000;
     animation: latir 1.8s infinite;
   }
   
